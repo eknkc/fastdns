@@ -1,11 +1,15 @@
 {
   "name": "fastdns",
-  "version": "1.0.0",
-  "description": "Caching patch for native DNS module",
+  "version": "1.0.1",
+  "description": "Caching wrapper for native DNS module",
   "main": "build.js",
   "scripts": {
     "build": "./node_modules/.bin/babel --presets es2015-node4 index.js -o build.js",
     "prepublish": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eknkc/fastdns.git"
   },
   "keywords": [
     "dns",
