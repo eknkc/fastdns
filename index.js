@@ -36,7 +36,9 @@ functions.forEach(function(name) {
     let cached = cache.get(key);
 
     if (cached) {
-      return callback(null, ...clone(cached));
+      return setImmediate(function() {
+        callback(null, ...clone(cached));
+      })
     }
 
     originals[name](...args, function(err, ...result) {
